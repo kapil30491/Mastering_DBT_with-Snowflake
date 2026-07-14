@@ -1,0 +1,7 @@
+sources:
+  - name: dbt_src # this is the source_name
+    database: dbt_db
+    schema: db_schema
+    tables:
+      - name: cust # this is the table_name (object name)
+      - name: stg_orders
