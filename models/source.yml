@@ -4,4 +4,7 @@ sources:
     schema: db_schema
     tables:
       - name: cust # this is the table_name (object name)
-      - name: stg_orders
+      - name: RAW_ORDERS
+      - name: RAW_ORDER_ITEMS
+      - name: RAW_PAYMENTS
+      - name: RAW_PRODUCTS
