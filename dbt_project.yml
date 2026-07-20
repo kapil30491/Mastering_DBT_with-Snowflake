@@ -34,9 +34,31 @@ clean-targets:         # directories to be removed by `dbt clean`
 # instead be materialized as tables. Any models you add to the root of the models folder will 
 # continue to be built as views. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
+seeds:
+  my_new_project:
+    country:
+      +schema: db_schema
+
+    state:
+      +delimiter: "|"
+      +schema: db_schema
+
+    zip:
+      +schema: db_schema
+      +column_types:
+        zip_code: varchar
+        country_name: varchar
 
 models:
   my_new_project:
-    # Applies to all files under models/example/
     example:
       +materialized: table
+
+    core:
+      +materialized: view
+      +schema: db_schema
+
+    stg:
+      +materialized: table
+      +schema: db_schema
+

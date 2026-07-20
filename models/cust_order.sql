@@ -1,0 +1,7 @@
+SELECT C.CUST_ID,C.NAME,O.ID,
+SUM(O.TOTAL_AMOUNT) AS TOT_AMNT
+FROM {{ source('dbt_src', 'cust') }} C
+JOIN {{ source('dbt_src', 'RAW_ORDERS') }} O
+ON C.CUST_ID = O.CUSTOMER_ID
+WHERE STATUS = 'COMPLETED'
+GROUP BY ALL
