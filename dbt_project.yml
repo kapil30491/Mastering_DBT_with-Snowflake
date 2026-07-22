@@ -46,7 +46,7 @@ seeds:
     zip:
       +schema: db_schema
       +column_types:
-        zip_code: varchar
+        zip_code: varchar 
         country_name: varchar
 
 models:

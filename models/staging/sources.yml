@@ -1,0 +1,8 @@
+sources:
+  - name: raw # this is the source_name
+    database: DB
+    schema: DEMO_SCH
+    tables:
+      - name: Customers # this is the table_name (object name)
+      - name: Products
+      - name: Orders
