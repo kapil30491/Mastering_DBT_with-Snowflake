@@ -1,0 +1,1 @@
+select {{address_concat('633/2','Gokul nagar','Gondia')}} as name
