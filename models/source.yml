@@ -9,3 +9,5 @@ sources:
       - name: RAW_PAYMENTS
       - name: RAW_PRODUCTS
       - name: transactions
+      - name: bank
+      - name: customer_transactions
