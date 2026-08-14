@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: trnx_test
+    description: "Customer amount should not be null"
+
+    columns:
+      - name: amount
+        tests:
+          - not_null
+
+      - name: transaction_type
+        description: "Transaction type must be one of the allowed values"
+        tests:
+          - accepted_values:
+              arguments:
+                values: 
+                  - "Refund"
+                  - "Transfer"
+                  - "Purchase"
+                  

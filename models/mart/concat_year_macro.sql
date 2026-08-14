@@ -1,1 +1,0 @@
-select {{ build_date('2025', '12', '25') }} as holiday

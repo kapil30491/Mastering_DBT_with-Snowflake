@@ -1,1 +1,0 @@
-select {{ create_email('kapil', 'gmail.com') }} as email
