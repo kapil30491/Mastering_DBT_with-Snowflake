@@ -9,6 +9,7 @@ models:
         tests:
           - not_null
 
+      
       - name: transaction_type
         description: "Transaction type must be one of the allowed values"
         tests:
@@ -18,4 +19,12 @@ models:
                   - "Refund"
                   - "Transfer"
                   - "Purchase"
-                  
+  
+  
+  - name: tran_date_less_then_currentdate
+    description: "Transaction date should be less than current_date"
+
+    columns:
+    - name: TRANSACTION_DATE
+      tests:
+        - trans_date_less_than_current_date
