@@ -1,0 +1,1 @@
+SELECT * FROM {{ source('danny_raw', 'MEMBERS') }}

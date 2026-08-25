@@ -1,9 +1,19 @@
 sources:
-  - name: raw # this is the source_name
+  - name: raw
     database: DB
     schema: DEMO_SCH
     tables:
-      - name: Customers # this is the table_name (object name)
+      - name: Customers
       - name: Products
       - name: Orders
-   
+
+  - name: danny_raw
+    database: DANNY_DB
+    schema: DANNY_SCHEMA
+    tables:
+      - name: MEMBERS
+      - name: MENU
+      - name: SALES
+
+      
+        
